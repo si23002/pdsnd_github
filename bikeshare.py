@@ -2,12 +2,15 @@ import time
 import pandas as pd
 import numpy as np
 
+#dictionary created that contains key-value pairs for the name of the city as the key and the corresponding city csv file as the value.
 CITY_DATA = {'Chicago': 'chicago.csv', 'chicago': 'chicago.csv',
              'New York City': 'new_york_city.csv', 'new york city': 'new_york_city.csv',
              'Washington': 'washington.csv', 'washington': 'washington.csv'}
 
+#dictionary created that contains key-value pairs for the month as the key and corresponding number of the month as the value.
 MONTH_DATA = {'january': 1, 'february': 2, 'march': 3, 'april': 4, 'may': 5, 'june': 6, 'no filter': 7}
 
+#list created that contains the options for the day input accepted values that an user can select.
 DAY_DATA = ['no filter', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
 
 
