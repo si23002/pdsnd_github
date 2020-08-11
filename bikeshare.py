@@ -28,8 +28,7 @@ def get_filters():
     # Running this loop to ensure the correct user input gets selected else repeat
     while city not in CITY_DATA.keys():
         print("\nPlease Select a City from the following options: ")
-        print("\n1. Chicago 2. New York City 3. Washington")
-        print("\nAccepted input:\nFull name of city; please use the name formats - (Chicago or chiacgo).")
+        print("\n1. Chicago/chicago 2. New York City/new york city 3. Washington/washington")
         # Taking user input and converting into lower to standardize them
         # You will find this happening at every stage of input throughout this
         city = input().lower()
@@ -261,7 +260,7 @@ def display_data(df):
     param1 (df): The data frame that the user selects to work with.
     Returns: None."""
 
-    print('\nCalculating User Stats...\n')
+    print('\nCalculating Users Statistics...\n')
     start_time = time.time()
 
     #Created a list that contains yes and no which will be the response to view raw data from the input of the user.
@@ -270,8 +269,7 @@ def display_data(df):
     #Added a counter variable to ensure the raw data comes from a set point when displayed.
     counter = 0
     while responsedata not in response_to_display:
-        print("\nWould you like to view the raw data from selected csv file?")
-        print("\nPlease type 'yes' or 'no'")
+        print("\nWould you like to view raw data? Yes or No?")
         responsedata = input().lower()
         # responsedata will input user's response and added the lower method just in case the user's response does not match the values from response_to_display list.
         if responsedata == 'yes':
@@ -283,7 +281,7 @@ def display_data(df):
 
     # added a while loop in the script so user can keep viewing more data from the file at a rate of five rows if they choose to.
     while responsedata == 'yes':
-        print("Would you like to view more data from the csv file?")
+        print("Would you like to see more data from the file?")
         #Counter variable is set to 0 and here we add five so everytime the user inputs to view more data, only 5 more rows will display.
         counter += 5
         responsedata = input().lower()
@@ -312,7 +310,7 @@ def main():
         display_data(df)
 
         #After all functions run, user can input yes to restart the program or no to end the program from running.
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to restart the program? yes or no.\n')
         if restart.lower() != 'yes':
             break
 
