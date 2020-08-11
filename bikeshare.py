@@ -260,7 +260,7 @@ def display_data(df):
     param1 (df): The data frame that the user selects to work with.
     Returns: None."""
 
-    print('\nCalculating Users Statistics...\n')
+    print('\nCalculating Raw Data...\n')
     start_time = time.time()
 
     #Created a list that contains yes and no which will be the response to view raw data from the input of the user.
@@ -269,7 +269,7 @@ def display_data(df):
     #Added a counter variable to ensure the raw data comes from a set point when displayed.
     counter = 0
     while responsedata not in response_to_display:
-        print("\nWould you like to view raw data? Yes or No?")
+        print("\nType 'Yes' to view raw data from the file, type 'No' if you do not want view more.")
         responsedata = input().lower()
         # responsedata will input user's response and added the lower method just in case the user's response does not match the values from response_to_display list.
         if responsedata == 'yes':
@@ -281,7 +281,7 @@ def display_data(df):
 
     # added a while loop in the script so user can keep viewing more data from the file at a rate of five rows if they choose to.
     while responsedata == 'yes':
-        print("Would you like to see more data from the file?")
+        print("Would you like to see more? Type 'Yes' or 'No'.")
         #Counter variable is set to 0 and here we add five so everytime the user inputs to view more data, only 5 more rows will display.
         counter += 5
         responsedata = input().lower()
